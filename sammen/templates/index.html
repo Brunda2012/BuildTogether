@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Sammen · Danish for “together”</p>
+  <h1>Meet the right person.<br>Over a coffee.</h1>
+  <p class="lead">Say who you are and who you want to meet. We bring you together, in person or on video.</p>
+  <a class="button" href="{{ url_for('join') }}">Find my coffee</a>
+</section>
+
+<section class="grid">
+  {% for label in roles.values() %}
+  <div class="card"><p class="card-title">{{ label }}</p></div>
+  {% endfor %}
+</section>
+
+<section class="principles">
+  <div><h2>Secure</h2><p>We ask only for what a match needs.</p></div>
+  <div><h2>European</h2><p>Built and hosted in Europe.</p></div>
+  <div><h2>Real people</h2><p>Verified profiles, no fakes.</p></div>
+</section>
+{% endblock %}

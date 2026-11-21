@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Join · Sammen{% endblock %}
+{% block content %}
+<section class="narrow">
+  <h1>Tell us who you are</h1>
+  {% if errors %}
+  <ul class="errors" role="alert">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+  {% endif %}
+
+  <form method="post" action="{{ url_for('join') }}" novalidate>
+    <label for="name">Name</label>
+    <input id="name" name="name" maxlength="80" value="{{ values.get('name', '') }}" required>
+
+    <label for="role">I am</label>
+    <select id="role" name="role" required>
+      <option value="">Choose</option>
+      {% for key, label in roles.items() %}
+      <option value="{{ key }}" {% if values.get('role') == key %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+
+    <fieldset>
+      <legend>I want to meet</legend>
+      {% for key, label in roles.items() %}
+      <label class="check"><input type="checkbox" name="looking_for" value="{{ key }}"
+        {% if key in values.get('looking_for', []) %}checked{% endif %}> {{ label }}</label>
+      {% endfor %}
+    </fieldset>
+
+    <label for="city">City</label>
+    <input id="city" name="city" maxlength="60" value="{{ values.get('city', '') }}" required>
+
+    <label for="meeting_mode">How I want to meet</label>
+    <select id="meeting_mode" name="meeting_mode" required>
+      {% for key, label in meeting_modes.items() %}
+      <option value="{{ key }}" {% if values.get('meeting_mode', 'either') == key %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="about">What I do and what I am looking for</label>
+    <textarea id="about" name="about" rows="4" maxlength="500" required>{{ values.get('about', '') }}</textarea>
+
+    <div class="trap" aria-hidden="true">
+      <label for="website">Leave this empty</label>
+      <input id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button class="button" type="submit">Find my coffee</button>
+  </form>
+</section>
+{% endblock %}

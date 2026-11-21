@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Your matches · Sammen{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Hej {{ person.name }}</p>
+  <h1>Your coffee matches</h1>
+
+  {% for match in matches %}
+  <article class="match">
+    <div class="match-head">
+      <div>
+        <h2>{{ match.profile.name }}{% if match.profile.verified %} <span class="badge">verified</span>{% endif %}</h2>
+        <p class="meta">{{ roles[match.profile.role] }} · {{ match.profile.city }}</p>
+      </div>
+      <p class="score">{{ match.score }}<span>%</span></p>
+    </div>
+    <p>{{ match.profile.about }}</p>
+    {% if match.intro %}<p class="intro">{{ match.intro }}</p>{% endif %}
+    <ul class="reasons">{% for reason in match.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
+    <p class="meeting">☕ {{ match.meeting }}</p>
+  </article>
+  {% else %}
+  <p class="lead">No match yet. As more people join, we will find your coffee.</p>
+  {% endfor %}
+</section>
+{% endblock %}
