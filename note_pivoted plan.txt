@@ -1,0 +1,16 @@
+Next 3 hours
+
+All three, first 15 minutes: Agree on one demo story. For example, Dr. Maya, a biochemical engineer, left a large pharma company three weeks ago and has a patent history. Anna is a bio-focused pre-seed angel. Also agree on the shared data shape: {id, headline, domain, location, signals[], openness, score, why_now}.
+
+Lovable builder:
+
+Hour 1: Build the investor onboarding (sector, stage, geography, check size) and the ranked feed with candidate cards, signal chips and a score, using hardcoded seed JSON.
+Hour 2: Build the candidate detail page with a signal timeline. Add a 3-minute candidate onboarding with an "open to" toggle and anonymity. Add the match flow, where mutual interest unlocks a "book a meeting" step.
+Hour 3: Polish, deploy, and fix only what the demo path needs.
+Skip real auth, payments, messaging and scraping.
+
+Signals researcher:
+
+By 0:45: Deliver a v1 signal taxonomy of about 12 signals. For each, list the source, how easy it is to detect, how much timing weight it carries, and any consent or ethics concerns. Examples: left role, layoff or vesting cliff, patent or paper activity, grants, university spinout, conference talks, GitHub activity, and explicit opt-in intent.
+By 1:30: Deliver the scoring formula and 30–40 seed profiles in the agreed schema, including three polished hero personas, each with a written "why now."
+Hour 3: Ask two or three hackathon mentors or investors which signals they'd actually act on, then adjust the weights.
