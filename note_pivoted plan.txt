@@ -14,3 +14,10 @@ Signals researcher:
 By 0:45: Deliver a v1 signal taxonomy of about 12 signals. For each, list the source, how easy it is to detect, how much timing weight it carries, and any consent or ethics concerns. Examples: left role, layoff or vesting cliff, patent or paper activity, grants, university spinout, conference talks, GitHub activity, and explicit opt-in intent.
 By 1:30: Deliver the scoring formula and 30–40 seed profiles in the agreed schema, including three polished hero personas, each with a written "why now."
 Hour 3: Ask two or three hackathon mentors or investors which signals they'd actually act on, then adjust the weights.
+
+Project planner:
+
+Write the pitch story, the incentive model above, the business model (investor subscription or success fee), and a short competitor comparison.
+Draft a 3-minute demo script and 5–6 slides covering problem, why now, product, incentives and cold-start plan, metrics, and ask.
+Prepare answers for likely investor questions: privacy and consent, cold start, competition, and bias.
+Act as timekeeper. Call a feature freeze at 2:30, run a mentor test at about 2:15, and rehearse at 2:45.
